@@ -24,8 +24,14 @@ AddProject(mc_dynamic_polytopes
   APT_DEPENDENCIES libqhull-dev
 )
 
+AddProject(mc_force_shoe_plugin
+  GITHUB_PRIVATE arntanguy/mc_force_shoe_plugin
+  GIT_TAG origin/topic/Rewrite
+  DEPENDS mc_rtc
+)
+
 AddProject(polytopeController
   GITHUB_PRIVATE Hugo-L3174/polytopeController
   GIT_TAG origin/master
-  DEPENDS mc_rtc DCM_VRPTask mc_dynamic_polytopes mc_state_observation
+  DEPENDS mc_rtc DCM_VRPTask mc_dynamic_polytopes mc_state_observation mc_force_shoe_plugin
 )
